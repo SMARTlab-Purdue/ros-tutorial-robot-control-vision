@@ -110,7 +110,7 @@ sudo apt-get install libopencv-dev python-opencv
 
 ## iRobot control with a keyboard 
 
-![irobot](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-Seminar/blob/master/Images/w3_o1.png)
+![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_o1.png)
 
 ## ROS Launch Files   
 
@@ -125,7 +125,7 @@ For Create2 robot (Roomba 600/700 series), launch the ROS drive using the follow
     $ roslaunch ca_driver create_2.launch
 
 ```
-![irobot](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-tutorials/blob/master/images/iRobot/w3_or2.png)
+![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_or2.png)
 
 ## Check the ROS Topics list to see if the robot drivers are publishing the state such as the odometry output in /odom, bumper sensor readings, etc.
 
@@ -138,10 +138,10 @@ For Create2 robot (Roomba 600/700 series), launch the ROS drive using the follow
 
 You can use    ``` $ rostopic pub /cmd_vel geometry_msgs/Twist <value> ``` as shown in the below image to see if your robot is responding to the velocity commands.
 
-![irobot](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-tutorials/blob/master/images/iRobot/w3_or3.png)
+![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_or3.png)
 
 If you change `z: 0.0` to `z: 5.0" -r 10`, you rotate the robot. The mechanism behind is, you send `geometry_msgs/Twist` messages to the topic `cmd_vel`, which the robot listens to to get forward and angular velocity inputs. 
-![irobot](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-tutorials/blob/master/images/iRobot/w3_or4.png)
+![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_or4.png)
 
 ## iRobot Tele-control by Keyboard     
 
@@ -152,14 +152,17 @@ Assuming you have installed the Teleoperation Twist Keyboard ROS package, run th
 ```    
     
 Now you could use keys listed on the terminal interface to control the robot.
-![irobot](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-tutorials/blob/master/images/iRobot/w3_or5.png)
+![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_or5.png)
 
 `teleop_twist_keyboard` is to enable keyboard control to iRobot, reading from the keyboard input and publishing it to /cmd_vel topic with the message type geometry_msgs/Twist.  For more details on this package, visit <http://wiki.ros.org/teleop_twist_keyboard>.
 
 ## Turtlesim simulator
 
 If you do not have a physical robot like create2, then you can still test the tutorial using a simulated turtle robot using
-``` rosrun turtlesim turtlesim_node ```
+
+``` bash
+rosrun turtlesim turtlesim_node 
+```
 
 Note, you will have to remap the /cmd_vel topic to /turtle1/cmd_vel if you use the turtlesim.
 
@@ -225,7 +228,7 @@ def image_callback(ros_data):
 		cv2.waitKey(2)
 
 ```
-![Ethcher](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-Seminar/blob/master/Images/1.png)
+![Ethcher](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/1.png)
 
 #### Step 2: Create a new node that subscribes to ```rotation_angle```, convert's the angle value into radians and publishes it as the "angular value for the z-axis" over the /cmd_vel topic. ####
 
@@ -282,7 +285,7 @@ def callback(data):
     pub.publish(msg)
 
 ```
-![Ethcher](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-Seminar/blob/master/Images/3.png)
+![Ethcher](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/3.png)
 
 ####  Step 3: Make iRobot rotate based on the location of person's face on the camera image.
 
@@ -296,7 +299,7 @@ def callback(data):
 
 - When you move face in front of the webcam the turtlesim/irobot will rotate
 
-![Ethcher](https://github.rcac.purdue.edu/ByungcheolMinGroup/ROS-Seminar/blob/master/Images/2.png)
+![Ethcher](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/2.png)
  
 
 ## Get iRobot Roomba (or turtlesim) to move towards a green colored object
