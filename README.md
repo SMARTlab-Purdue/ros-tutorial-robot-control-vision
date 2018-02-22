@@ -1,4 +1,3 @@
-# ROS_tutorial_iRobot
 ROS tutorial by Purdue SMART lab: iRobot Create2 teleoperation and Computer Vision based bbject detection for mobile robot control.
 
 # 1. Objectives
@@ -6,10 +5,14 @@ This ROS tutorial provides an overview of teleoperating (control) an iRobot crea
 Additionally, this tutorial will help you learn some basics of computer vision and robot control methods in ROS.
 
 Demonstration video:
-Please visit the below videos to see what this tutorial is expected to achieve.
+Please watch the videos below to get an idea of what is expected to be achieved by this tutorial.
+
+<https://www.youtube.com/watch?v=ZyD-bbF6ts4>
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ZyD-bbF6ts4/0.jpg)](https://www.youtube.com/watch?v=ZyD-bbF6ts4)
 
+<https://www.youtube.com/watch?v=ZyD-bbF6ts4>
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-P3i7L_g1OM/0.jpg)](https://www.youtube.com/watch?v=-P3i7L_g1OM)
+
 
 
 # 2. Credits
@@ -43,10 +46,12 @@ A basic background of using Linux-based OS, ROS and OpenCV will be required to u
 
 This tutorial was tested successfully in Ubuntu 14.04, ROS-indigo with OpenCV 3.0.0.
 
-# 5. Installation
+# 4. Installation of relevant dependencies/packages
 
 ###  Install ROS
-We recommend you install _ros-indigo-desktop-full_ so that you have all the necessary packages. This full package comes with Gazebo 2.2 as default. We recommend using a desktop PC or a laptop. 
+We used ROS Indigo in this tutorial. But the tutorial could work even in ROS Kinetic/Lunar, although we did not validate it in Kinetic Kame. 
+
+We recommend you install _ros-indigo-desktop-full_ so that you have all the necessary packages. The full package comes with Gazebo 2.2 as default. We recommend using a desktop PC or a laptop with Ubuntu 14.04+. 
 
 ### Installing iRobot Create2 (Roomba 600) Driver
 The ROS driver for Create2 robot is provided by the Autonomy lab at SFU, Canada. 
@@ -112,14 +117,14 @@ sudo apt-get install libopencv-dev python-opencv
 ``` sudo apt-get install ros-indigo-turtlesim ```
 
 
-# 6. Tutorial
+# 5. Tutorial
 
 
-## iRobot control with a keyboard 
+## 5.1 iRobot control with a keyboard 
 
 ![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_o1.png)
 
-## ROS Launch Files   
+### ROS Launch Files   
 
 First, run a roscore, which will act as master and establishes connections between all ROS nodes.
 
@@ -134,7 +139,7 @@ For Create2 robot (Roomba 600/700 series), launch the ROS drive using the follow
 ```
 ![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_or2.png)
 
-## Check the ROS Topics list to see if the robot drivers are publishing the state such as the odometry output in /odom, bumper sensor readings, etc.
+### Check the ROS Topics list to see if the robot drivers are publishing the state such as the odometry output in /odom, bumper sensor readings, etc.
 
 ``` bash
 
@@ -150,7 +155,7 @@ You can use    ``` $ rostopic pub /cmd_vel geometry_msgs/Twist <value> ``` as sh
 If you change `z: 0.0` to `z: 5.0" -r 10`, you rotate the robot. The mechanism behind is, you send `geometry_msgs/Twist` messages to the topic `cmd_vel`, which the robot listens to to get forward and angular velocity inputs. 
 ![irobot](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/w3_or4.png)
 
-## iRobot Tele-control by Keyboard     
+### iRobot Teleoperation with Keyboard     
 
 Assuming you have installed the Teleoperation Twist Keyboard ROS package, run the ROS node for the Teleoperation Twist Keyboard
 
@@ -163,7 +168,7 @@ Now you could use keys listed on the terminal interface to control the robot.
 
 `teleop_twist_keyboard` is to enable keyboard control to iRobot, reading from the keyboard input and publishing it to /cmd_vel topic with the message type geometry_msgs/Twist.  For more details on this package, visit <http://wiki.ros.org/teleop_twist_keyboard>.
 
-## Turtlesim simulator
+### Turtlesim simulator
 
 If you do not have a physical robot like create2, then you can still test the tutorial using a simulated turtle robot using
 
@@ -174,7 +179,7 @@ rosrun turtlesim turtlesim_node
 Note, you will have to remap the /cmd_vel topic to /turtle1/cmd_vel if you use the turtlesim.
 
 
-## Get iRobot Roomba to rotate and track an individual's face
+## 5.2 Get iRobot Roomba to rotate and track an individual's face
 
 Follow the below steps:
   
@@ -309,7 +314,7 @@ def callback(data):
 ![Ethcher](https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/blob/master/images/2.png)
  
 
-## Get iRobot Roomba (or turtlesim) to move towards a green colored object
+## 5.3 Get iRobot Roomba (or turtlesim) to move towards a green colored object
 
 This tutorial will be about detecting a green colored object and enabling any robot such as the iroomba or turtlesim to move towards the object.
 
@@ -469,7 +474,7 @@ def callback(data):
 - The video for final deliverable can be accessed here <https://youtu.be/-P3i7L_g1OM>
 
 
-# Optional extensions - iRobot Remote control using Joystick (Gamepad)
+# 6. Optional extensions - iRobot Remote control using Joystick (Gamepad)
 One can also use a joystick (e.g. Logitech Wireless Gamepad F710) to control the robot remotely. We provide a brief tutorial to inspire our readers.
 
 
@@ -556,4 +561,4 @@ Installing the joystick driver
 After this tutorial, one should gain skills in teleoperating (control) an iRobot create2 robot. This tutorial uses ROS Indigo version and we deployed packages including teleoperation-twist-keyboard, ros-indigo-joy, and OpenCV. 
 We also showed how to control a robot motion using vision based object detection and demonstrated this idea with an iRobot create2 robot. Eventually, we exhibited the use of the robot to track a ball/person using OpenCV algorithms, thus one can learn how to integrate openCV in robot control. We encourage readers to learn more about our other ROS tutorials. 
 
-If you have any feedback please feel free to reach us through email provided in the beginning of this tutorial.
+If you have any feedback please feel free to reach us through email: Arabinda Samantaray (samantar@purdue.edu) and Shaocheng Luo (scluo@purdue.edu).
