@@ -8,9 +8,11 @@ Demonstration video:
 Please watch the videos below to get an idea of what is expected to be achieved by this tutorial.
 
 <https://www.youtube.com/watch?v=ZyD-bbF6ts4>
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ZyD-bbF6ts4/0.jpg)](https://www.youtube.com/watch?v=ZyD-bbF6ts4)
 
 <https://www.youtube.com/watch?v=ZyD-bbF6ts4>
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-P3i7L_g1OM/0.jpg)](https://www.youtube.com/watch?v=-P3i7L_g1OM)
 
 
