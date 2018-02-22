@@ -221,7 +221,7 @@ if __name__ == '__main__':
 ```
 
 * The ``` image_callback``` function code will utilise the ``` haarcascade_frontalface_default.xml ``` file to detect the individuals face on the compressed image it obtains as ``` ros_data ```. Subsequently, we will calculate the coordinates of the center of the bounding box and evaluate its distance from the center x-coordinate of the window frame (in my case it is 320 as the x-coordinate of window frame ranges from 0-640).
-Then we will convert this distance into the degree value the iroomba should rotate. This degree value is published over the topic ``` rotation angle ```. 
+Then we will convert this distance into the degree value the robot should rotate. This degree value is published over the topic ``` rotation angle ```. 
 
 ``` bash 
 def image_callback(ros_data):
@@ -303,9 +303,9 @@ def callback(data):
 
 ####  Step 3: Make iRobot rotate based on the location of person's face on the camera image.
 
-- If you have the robot installed with a camera, then run the above nodes and launch the icreate ``` roslaunch ca_driver create_2.launch```  drivers and usb_cam node ``` rosrun usb_cam usb_node ``` 
+- If you have the robot installed with a camera, then run the above nodes and launch the create2 drivers ``` roslaunch ca_driver create_2.launch```  drivers and usb_cam node ``` rosrun usb_cam usb_node ``` 
 
-- The video for final deliverable can be accessed here <https://youtu.be/ZyD-bbF6ts4>
+- A demonstration video is available here: <https://youtu.be/ZyD-bbF6ts4>
 
 ####  Step 4: Make turtlesim rotate
 
@@ -318,7 +318,7 @@ def callback(data):
 
 ## 5.3 Get iRobot Roomba (or turtlesim) to move towards a green colored object
 
-This tutorial will be about detecting a green colored object and enabling any robot such as the iroomba or turtlesim to move towards the object.
+This tutorial will be about detecting a green colored object and enabling any robot such as the Roomba or turtlesim to move towards the object.
 
 This tutorial will involve the following steps:
   
@@ -465,7 +465,7 @@ def callback(data):
 
 ```
 
-* Make irobot/turtlesim move linearily
+* Make irobot/turtlesim move linearly
 
 - If you have the robot installed with a camera, then run the above nodes and launch the create2 and usb_cam drivers
 
@@ -473,7 +473,7 @@ def callback(data):
 
 - When you place a green colored object infront of the webcam the turtlesim/irobot will move towards it
 
-- The video for final deliverable can be accessed here <https://youtu.be/-P3i7L_g1OM>
+- A demonstration video is available here: <https://youtu.be/-P3i7L_g1OM>
 
 
 # 6. Optional extensions - iRobot Remote control using Joystick (Gamepad)
