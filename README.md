@@ -1,4 +1,4 @@
-ROS tutorial by Purdue SMART lab: iRobot Create2 teleoperation and Computer Vision based bbject detection for mobile robot control.
+ROS tutorial by Purdue SMART lab: iRobot Create2 teleoperation and Computer Vision based object detection for mobile robot control.
 
 # 1. Objectives
 This ROS tutorial provides an overview of teleoperating (control) an iRobot create2 (roomba) mobile robot. Then, we look at ways to make use of the robot to track a ball/person using openCV algorithms. For those who do not have a creat2 robot, we also show a case of controlling a turtlebot in simulation (instead of iRobot control) in this tutorial. 
