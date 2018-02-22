@@ -3,8 +3,12 @@
   <name>irobot_vision_tutorial</name>
   <version>0.1.0</version>
   <description>The irobot_vision_tutorial package for the Purdue SMART lab ROS tutorial on controlling iRobot create2 based on keyboard and vision-based approaches such as face detection and colored object detection </description>
+
   <maintainer email="ramviyas@purdue.edu">Ramviyas Parasurman</maintainer>
   <license>MIT</license>
+  <author email="lee1424@purdue.edu">Shaocheng Luo</author>
+  <author email="tmina@purdue.edu">Arabinda Samantaray</author>
+
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
