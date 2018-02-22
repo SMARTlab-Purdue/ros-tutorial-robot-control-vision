@@ -1,3 +1,4 @@
+# ROS Tutorial on Teleoperation and Vision based Robot Control
 ROS tutorial by Purdue SMART lab: iRobot Create2 teleoperation and Computer Vision based object detection for mobile robot control.
 
 The wiki page of this repository also has the tutorial instructions: <https://github.com/SMARTlab-Purdue/ros-tutorial-robot-control-vision/wiki>
@@ -7,7 +8,7 @@ This ROS tutorial provides an overview of teleoperating (control) an iRobot crea
 Additionally, this tutorial will help you learn some basics of computer vision and robot control methods in ROS.
 
 Demonstration video:
-Please watch the videos below to get an idea of what is expected to be achieved by this tutorial.
+Please watch the videos below to get an idea of what you can expect to achieve from this tutorial.
 
 <https://www.youtube.com/watch?v=ZyD-bbF6ts4>
 
@@ -24,7 +25,7 @@ This tutorial is prepared by Arabinda Samantaray (samantar@purdue.edu) and Shaoc
 
 The repository is maintained by Ramviyas Parasurman (ramviyas@purdue.edu).
 
-We acknowledge the following sources which were used to prepare this tutorial:
+We acknowledge the following sources that were used to prepare this tutorial:
 
 - http://wiki.ros.org/ROS/Tutorials
 
@@ -59,6 +60,10 @@ This tutorial was tested successfully in Ubuntu 14.04, ROS-indigo with OpenCV 3.
 We used ROS Indigo in this tutorial. But the tutorial could work even in ROS Kinetic/Lunar, although we did not validate it in Kinetic Kame. 
 
 We recommend you install _ros-indigo-desktop-full_ so that you have all the necessary packages. The full package comes with Gazebo 2.2 as default. We recommend using a desktop PC or a laptop with Ubuntu 14.04+. 
+
+``` sudo apt-get install ros-indigo-desktop-full ```
+
+For more help with ROS installation, follow the instructions here: <https://wiki.ros.org/indigo/installation>
 
 ### Installing iRobot Create2 (Roomba 600) Driver
 The ROS driver for Create2 robot is provided by the Autonomy lab at SFU, Canada. 
@@ -565,7 +570,7 @@ Installing the joystick driver
 
 
 # Summary  
-After this tutorial, one should gain skills in teleoperating (control) an iRobot create2 robot. This tutorial uses ROS Indigo version and we deployed packages including teleoperation-twist-keyboard, ros-indigo-joy, and OpenCV. 
+After this tutorial, one should gain skills in teleoperating (control) an iRobot create2 robot. This tutorial used ROS Indigo version and we deployed packages including teleoperation-twist-keyboard, ros-indigo-joy, and OpenCV. 
 We also showed how to control a robot motion using vision based object detection and demonstrated this idea with an iRobot create2 robot. Eventually, we exhibited the use of the robot to track a ball/person using OpenCV algorithms, thus one can learn how to integrate openCV in robot control. We encourage readers to learn more about our other ROS tutorials. 
 
 If you have any feedback please feel free to reach us through email: Arabinda Samantaray (samantar@purdue.edu) and Shaocheng Luo (scluo@purdue.edu).
