@@ -21,6 +21,9 @@ Please watch the videos below to get an idea of what is expected to be achieved 
 
 # 2. Credits
 This tutorial is prepared by Arabinda Samantaray (samantar@purdue.edu) and Shaocheng Luo (scluo@purdue.edu).
+
+The repository is maintained by Ramviyas Parasurman (ramviyas@purdue.edu).
+
 We acknowledge the following sources which were used to prepare this tutorial:
 
 - http://wiki.ros.org/ROS/Tutorials
